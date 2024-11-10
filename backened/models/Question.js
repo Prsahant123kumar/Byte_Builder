@@ -20,8 +20,15 @@ const QuestionSchema=new Schema({
                 required: true
             }
         }
-    ]
-
+    ],
+    TimeStart:{
+        type: Date,
+        required: true
+    },
+    Duration: {
+        type: Number,
+        required: true
+      }
 });
 
 QuestionSchema.pre('save', function (next) {
